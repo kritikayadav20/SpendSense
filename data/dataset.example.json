@@ -1,0 +1,16 @@
+{
+  "verified": false,
+  "file": "raw/REPLACE_WITH_ACTUAL_FILENAME.csv",
+  "description_column": "REPLACE_WITH_DOCUMENTED_TEXT_COLUMN",
+  "target_column": "REPLACE_WITH_DOCUMENTED_TARGET_COLUMN",
+  "source_url": "https://www.kaggle.com/competitions/aurora-gate-expense-categorization-challenge/data",
+  "license": "pending",
+  "license_evidence": "Replace with source license URL, terms or permission evidence",
+  "provenance": "uncertain",
+  "provenance_notes": "Record what the source actually says about how records were created",
+  "taxonomy": [],
+  "taxonomy_evidence": "Replace with documentation defining each target label",
+  "feature_definitions": {},
+  "sha256": "Copy the hash from python -m src.data_loader",
+  "downloaded_on": "YYYY-MM-DD"
+}

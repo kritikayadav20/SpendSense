@@ -1,0 +1,49 @@
+{
+  "verified": true,
+  "file": "raw/spendsense_synthetic_v1_seed42.csv",
+  "description_column": "description",
+  "target_column": "category",
+  "source_url": "local:src/generate_synthetic.py",
+  "license": "Project-authored synthetic demonstration data; authorized for this project",
+  "license_evidence": "docs/synthetic_dataset.md — authorship and requested use",
+  "provenance": "synthetic",
+  "provenance_notes": "Generated locally at the user's explicit request. No bank/customer data, external dataset, or Kaggle labels were used. Labels follow the authored generation recipe, not independent annotation.",
+  "taxonomy": [
+    "Food and Dining",
+    "Groceries",
+    "Transportation",
+    "Shopping",
+    "Entertainment",
+    "Bills and Utilities",
+    "Health",
+    "Travel",
+    "Subscriptions",
+    "Education"
+  ],
+  "taxonomy_evidence": "docs/synthetic_dataset.md and DEFINITIONS in src/generate_synthetic.py",
+  "feature_definitions": {
+    "description": "Fictional transaction text; only model input.",
+    "category": "Single label assigned by the documented synthetic generation scenario; prediction target only."
+  },
+  "sha256": "7d22fbc094b52c1aea83822b740eee59a28d44924667a22de8990f64a707c1b9",
+  "generation": {
+    "ambiguous_groups": 83,
+    "base_groups": 1160,
+    "rows": 2320,
+    "seed": 42,
+    "generator_version": 1
+  },
+  "generator_sha256": "9790572c5c8b02c17bf965fe4dc4b81a9b07a281ec0032470225ee45932d10b9",
+  "category_definitions": {
+    "Food and Dining": "Prepared meals, drinks and food service.",
+    "Groceries": "Ingredients and household food supplies for preparation.",
+    "Transportation": "Local commuting, local transit, fuel and parking.",
+    "Shopping": "Clothing, electronics and non-food household goods.",
+    "Entertainment": "One-time leisure activities and event admission.",
+    "Bills and Utilities": "Electricity, water, gas, telecom and connectivity charges.",
+    "Health": "Medical care, pharmacy products and diagnostic services.",
+    "Travel": "Intercity journeys, accommodation and trip services.",
+    "Subscriptions": "Recurring digital content, membership and software plans.",
+    "Education": "Academic fees, study materials, printing and stationery."
+  }
+}
