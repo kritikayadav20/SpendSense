@@ -9,7 +9,7 @@
     "target_column": "category",
     "source_url": "local:src/generate_synthetic.py",
     "license": "Project-authored synthetic demonstration data; authorized for this project",
-    "license_evidence": "docs/synthetic_dataset.md — authorship and requested use",
+    "license_evidence": "docs/synthetic_dataset.md â€” authorship and requested use",
     "provenance": "synthetic",
     "provenance_notes": "Generated locally at the user's explicit request. No bank/customer data, external dataset, or Kaggle labels were used. Labels follow the authored generation recipe, not independent annotation.",
     "taxonomy": [

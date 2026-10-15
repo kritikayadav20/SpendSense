@@ -97,7 +97,7 @@ def fit_models(train, seed=42, groups=None):
 
 def write_json(path, value):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False))
+    Path(path).write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False), encoding="utf-8")
 
 
 def train_benchmark(manifest_path, root=ROOT, seed=42):

@@ -53,10 +53,12 @@ def readiness():
         run = read_metadata(pointer)["run_id"]
         metadata = read_metadata(ROOT / "models" / run / "metadata.json")
         path = ROOT / "models" / run / f"{metadata['selected_model']}.joblib"
+        if not path.is_file():
+            return None, None, f"Missing model file: {path.name}"
         status = "Synthetic demo model ready" if metadata["dataset"]["provenance"] == "synthetic" else "Trained model ready"
         return metadata, cached_model(str(path), path.stat().st_mtime_ns), status
-    except Exception:
-        return None, None, "Model artifacts could not be loaded; rerun the documented training workflow"
+    except Exception as exc:
+        return None, None, f"Model artifacts could not be loaded: {exc}"
 
 
 db = Database(os.environ.get("SPENDSENSE_DB", str(ROOT / "data" / "spendsense.sqlite3")))

@@ -118,9 +118,9 @@ def write_dataset(root=ROOT, seed=42, activate=False):
         'category_definitions': DEFINITIONS,
     }
     path = root / 'data' / 'synthetic.json'
-    path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n')
+    path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     if activate:
-        (root / 'data' / 'dataset.json').write_text(path.read_text())
+        (root / 'data' / 'dataset.json').write_text(path.read_text(encoding='utf-8'), encoding='utf-8')
     return path, manifest
 
 

@@ -78,10 +78,10 @@ def build_report(root=ROOT, docs_root=None):
         )
         draft = before_dataset + dataset_section + "### 5. Cleaning and TF-IDF representation" + after_dataset
     # Historical acquisition account remains factual even after a later source is verified.
-    draft += "\n\n" + (docs_root / "literature_review.md").read_text()
+    draft += "\n\n" + (docs_root / "literature_review.md").read_text(encoding="utf-8")
     destination = root / "reports" / "submission.md"
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text(draft)
+    destination.write_text(draft, encoding="utf-8")
     return destination
 
 

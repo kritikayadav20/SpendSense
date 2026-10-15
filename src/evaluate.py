@@ -89,7 +89,7 @@ def evaluate_run(root=ROOT, run_id=None):
                   f"![{MODEL_NAMES[name]} per-class F1](figures/{run_id}/{name}_per_class.png)"]
     lines += [f"![Decision tree](figures/{run_id}/decision_tree.png)", "",
               "Misclassification examples: local metrics files contain source row, actual and predicted class; descriptions are withheld. Raw rows can be examined privately."]
-    (root / "reports" / "results.md").write_text("\n".join(lines))
+    (root / "reports" / "results.md").write_text("\n".join(lines), encoding="utf-8")
     return comparison
 
 

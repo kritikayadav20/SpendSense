@@ -66,4 +66,7 @@ def save_benchmark_figures(comparison, details, models, directory):
     fig.tight_layout()
     fig.savefig(directory / "decision_tree.png", dpi=140)
     plt.close(fig)
-    (directory / "decision_tree_rules.txt").write_text(export_text(tree.named_steps["classifier"], feature_names=list(features), max_depth=4))
+    (directory / "decision_tree_rules.txt").write_text(
+        export_text(tree.named_steps["classifier"], feature_names=list(features), max_depth=4),
+        encoding="utf-8",
+    )
