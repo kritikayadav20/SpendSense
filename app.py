@@ -38,7 +38,7 @@ def cached_model(path, modified):
 
 @st.cache_data
 def cached_json(path, modified):
-    return json.loads(Path(path).read_text())
+    return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def read_metadata(path):
@@ -369,7 +369,7 @@ elif page == "ML Lab":
                 st.dataframe(pd.read_csv(metrics_dir / f"{choice}_errors.csv"), hide_index=True)
             with st.expander("Decision Tree · first three levels"):
                 st.image(str(figures_dir / "decision_tree.png"), use_container_width=True)
-                st.code((figures_dir / "decision_tree_rules.txt").read_text())
+                st.code((figures_dir / "decision_tree_rules.txt").read_text(encoding="utf-8"))
             with st.expander("Dataset profile, preprocessing & evaluation"):
                 st.json({"source": metadata["dataset"], "profile": metadata["profile"], "cleaning": metadata["cleaning"], "split": metadata["split"], "grouped_evaluation": metadata["grouped_evaluation"]})
             st.caption("Macro-F1 weights each category equally. Training time includes tuning and refit; latency is batch wall time per record. Tree splits can struggle with sparse text. High scores do not establish generalization to unseen merchants or colleges.")
@@ -381,7 +381,7 @@ elif page == "Methodology":
     for label, filename in [("Methodology", "methodology.md"), ("Dataset card", "dataset_card.md"), ("Model card", "model_card.md"), ("Literature & references", "literature_review.md")]:
         with st.expander(label, expanded=label == "Methodology"):
             file = ROOT / "docs" / filename
-            st.markdown(file.read_text() if file.exists() else "Documentation is being prepared.")
+            st.markdown(file.read_text(encoding="utf-8") if file.exists() else "Documentation is being prepared.")
 
 st.divider()
 st.caption("SpendSense Campus · ML-powered categorization, transparent budget coaching · Your records stay on this machine.")
