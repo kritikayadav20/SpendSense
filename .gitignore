@@ -71,18 +71,28 @@ service-account*.json
 /data/processed/*
 !/data/processed/.gitkeep
 
-# Fitted models and active run pointers are recreated by src.train
+# Fitted models and active run pointers are recreated by src.train.
+# The active synthetic demo run is committed so Streamlit Cloud can serve predictions.
 /models/*
 !/models/.gitkeep
+!/models/active.json
+!/models/20261015T115707Z-049bd6f5/
+!/models/20261015T115707Z-049bd6f5/**
 *.joblib
+!/models/20261015T115707Z-049bd6f5/*.joblib
 *.pkl
 *.pickle
 
-# Generated benchmark reports, figures and local verification output
+# Generated benchmark reports, figures and local verification output.
+# Keep the active demo evaluation artifacts for the ML Lab page in cloud deploys.
 /reports/metrics/*
 !/reports/metrics/.gitkeep
+!/reports/metrics/20261015T115707Z-049bd6f5/
+!/reports/metrics/20261015T115707Z-049bd6f5/**
 /reports/figures/*
 !/reports/figures/.gitkeep
+!/reports/figures/20261015T115707Z-049bd6f5/
+!/reports/figures/20261015T115707Z-049bd6f5/**
 /reports/verification/*
 !/reports/verification/.gitkeep
 /reports/results.md

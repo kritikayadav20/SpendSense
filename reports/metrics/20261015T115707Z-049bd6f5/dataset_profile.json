@@ -1,0 +1,52 @@
+{
+  "filename": "spendsense_synthetic_v1_seed42.csv",
+  "sha256": "7d22fbc094b52c1aea83822b740eee59a28d44924667a22de8990f64a707c1b9",
+  "records": 2320,
+  "columns": 2,
+  "headers": [
+    "description",
+    "category"
+  ],
+  "missing_values": {
+    "description": 0,
+    "category": 0
+  },
+  "blank_values": {
+    "description": 0,
+    "category": 0
+  },
+  "target_column": "category",
+  "description_column": "description",
+  "raw_class_distribution": {
+    "Food and Dining": 360,
+    "Transportation": 320,
+    "Groceries": 280,
+    "Shopping": 240,
+    "Education": 240,
+    "Bills and Utilities": 200,
+    "Entertainment": 180,
+    "Subscriptions": 180,
+    "Travel": 160,
+    "Health": 160
+  },
+  "cleaning": {
+    "raw_rows": 2320,
+    "retained_rows": 2320,
+    "exclusion_counts": {},
+    "exclusions": [],
+    "class_distribution": {
+      "Food and Dining": 360,
+      "Transportation": 320,
+      "Groceries": 280,
+      "Shopping": 240,
+      "Education": 240,
+      "Bills and Utilities": 200,
+      "Entertainment": 180,
+      "Subscriptions": 180,
+      "Travel": 160,
+      "Health": 160
+    },
+    "removed_categories": [],
+    "policy": "NFKC + whitespace; casefold key; remove all label conflicts, keep first exact normalized description."
+  }
+}

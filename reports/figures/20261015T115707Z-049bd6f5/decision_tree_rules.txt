@@ -1,0 +1,28 @@
+|--- and <= 0.07
+|   |--- plan <= 0.10
+|   |   |--- fare <= 0.10
+|   |   |   |--- ride <= 0.10
+|   |   |   |   |--- bill <= 0.09
+|   |   |   |   |   |--- truncated branch of depth 26
+|   |   |   |   |--- bill >  0.09
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- ride >  0.10
+|   |   |   |   |--- class: Transportation
+|   |   |--- fare >  0.10
+|   |   |   |--- class: Transportation
+|   |--- plan >  0.10
+|   |   |--- class: Subscriptions
+|--- and >  0.07
+|   |--- notebook <= 0.13
+|   |   |--- and sandwich <= 0.13
+|   |   |   |--- and snacks <= 0.12
+|   |   |   |   |--- and samosa <= 0.13
+|   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- and samosa >  0.13
+|   |   |   |   |   |--- class: Food and Dining
+|   |   |   |--- and snacks >  0.12
+|   |   |   |   |--- class: Food and Dining
+|   |   |--- and sandwich >  0.13
+|   |   |   |--- class: Food and Dining
+|   |--- notebook >  0.13
+|   |   |--- class: Education

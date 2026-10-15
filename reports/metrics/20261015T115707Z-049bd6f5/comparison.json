@@ -1,0 +1,62 @@
+[
+  {
+    "model": "logistic_regression",
+    "display_name": "Logistic Regression",
+    "provenance": "synthetic",
+    "accuracy": 0.9245689655172413,
+    "prediction_ms_per_record": 0.031183836207329195,
+    "macro_precision": 0.9392812637492808,
+    "macro_recall": 0.928125,
+    "macro_f1": 0.9330071463271992,
+    "weighted_precision": 0.9266308149610848,
+    "weighted_recall": 0.9245689655172413,
+    "weighted_f1": 0.9249638962165562,
+    "cv_macro_f1": 0.9374313676728006,
+    "training_seconds": 10.739805799999885
+  },
+  {
+    "model": "multinomial_nb",
+    "display_name": "Multinomial Naive Bayes",
+    "provenance": "synthetic",
+    "accuracy": 0.9288793103448276,
+    "prediction_ms_per_record": 0.029913577585485372,
+    "macro_precision": 0.940554230810583,
+    "macro_recall": 0.9335069444444445,
+    "macro_f1": 0.9364505021017877,
+    "weighted_precision": 0.930516942520979,
+    "weighted_recall": 0.9288793103448276,
+    "weighted_f1": 0.9291876280549908,
+    "cv_macro_f1": 0.9383937363350588,
+    "training_seconds": 1.178233700000419
+  },
+  {
+    "model": "linear_svm",
+    "display_name": "Linear SVM",
+    "provenance": "synthetic",
+    "accuracy": 0.9439655172413793,
+    "prediction_ms_per_record": 0.029017887927380047,
+    "macro_precision": 0.9467263522005179,
+    "macro_recall": 0.9474702380952381,
+    "macro_f1": 0.9452847269814046,
+    "weighted_precision": 0.9474056244777992,
+    "weighted_recall": 0.9439655172413793,
+    "weighted_f1": 0.9442097733128058,
+    "cv_macro_f1": 0.9574416966158367,
+    "training_seconds": 1.1693469999991066
+  },
+  {
+    "model": "decision_tree",
+    "display_name": "Decision Tree",
+    "provenance": "synthetic",
+    "accuracy": 0.5538793103448276,
+    "prediction_ms_per_record": 0.02894892241423302,
+    "macro_precision": 0.9188235294117646,
+    "macro_recall": 0.5266517857142857,
+    "macro_f1": 0.5851842525633806,
+    "weighted_precision": 0.916024340770791,
+    "weighted_recall": 0.5538793103448276,
+    "weighted_f1": 0.6122726057506541,
+    "cv_macro_f1": 0.568655669893688,
+    "training_seconds": 6.395319199998994
+  }
+]
